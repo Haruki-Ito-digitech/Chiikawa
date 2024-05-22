@@ -10,8 +10,9 @@ num = int(args[1])
 #素数判定処理
 def Prime_judge(num):
     #2~numまで計算を繰り返す
+    num_sq = math.floor(math.sqrt(num))
     judge = "Prime"
-    for i in range(2, num):
+    for i in range(2, num_sq):
         #割り切れたら素数ではない
         if num % int(i) == 0:
             judge = "not"
