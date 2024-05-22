@@ -10,15 +10,18 @@ num = int(args[1])
 #素数判定処理
 def Prime_judge(num):
     #2~numまで計算を繰り返す
+    judge = "Prime"
     for i in range(2, num):
         #割り切れたら素数ではない
         if num % int(i) == 0:
             judge = "not"
             #素数ではないと分かった時点で処理終了
             break
+    """
         else:
         #割り切れなければ素数の可能性あり
             judge = "Prime"
+    """
     return judge
 
 #メイン関数
