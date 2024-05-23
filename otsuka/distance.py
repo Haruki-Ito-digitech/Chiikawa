@@ -6,14 +6,16 @@ from distancedb import STATION
 import sys
 args = sys.argv
 
-#x = session.query(STATION.kilo).filter(STATION.name == args[1])
-#y = session.query(STATION.kilo).filter(STATION.name == args[2])
+#STATIONからnammeが入力と同じ行をxとyに格納
+x = session.query(STATION).filter_by(name =args[1]).first()
+y = session.query(STATION).filter_by(name =args[2]).first()
 
-#print(x, end="")
-#print(y, end="")
+#STATIONでnameが入力されたものの行にあるkiroを出力
+print(x.kilo, end="")
+print(y.kilo, end="")
 
-#a = float(x)
-#b = float(y)
-#w = abs(a - b)
+#二駅間の距離の計算
+w = abs(x.kilo - y.kilo)
 
-#print(w, end="")
+#距離を出力
+print(w, end="")

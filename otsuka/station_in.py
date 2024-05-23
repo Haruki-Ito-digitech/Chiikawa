@@ -14,32 +14,10 @@ station = STATION(
     kilo = 6.78
 )
 
-station = STATION(
-    seq = 3, 
-    name = "新横浜", 
-    kilo = 25.54
-)
-
-station = STATION(
-    seq = 4, 
-    name = "名古屋", 
-    kilo = 342.02
-)
-
-station = STATION(
-    seq = 5, 
-    name = "京都", 
-    kilo = 476.31
-)
-
-station = STATION(
-    seq = 6, 
-    name = "新大阪", 
-    kilo = 515.35
-)
-
 #INSERT処理
 session.add(station)
+
+result = session.query(STATION).filter_by(seq=6(6,新大阪,515.35)),delete()
 
 #コミット
 session.commit()
