@@ -22,11 +22,9 @@ transport = Transport(
 
 # エラー処理
 try:
-    # INSET処理
-    session.add(transport)
-    # コミット
-    session.commit()
-
+    session.add(transport)                              # INSET処理
+    session.commit()                                    # コミット
+    print("交通費精算テーブルにデータを登録しました")
 except IntegrityError as sqlalchemy_error:
     print("error:交通費精算テーブルにデータを登録できませんでした")
 except:
